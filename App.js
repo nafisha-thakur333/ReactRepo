@@ -17,8 +17,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
      <h2>I am h2 tag</h2>
    </div>
  </div>
- 
- 
  */
 
 const parent = React.createElement("div",{id:"parent"}, [
