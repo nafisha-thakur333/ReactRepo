@@ -1,0 +1,25 @@
+● What is Emmet?
+-> Emmet uses different abbreviations and short expressions depending on what’s passed, and then dynamically converts the abbreviations into the full code.
+
+● Difference between a Library and Framework?
+When you use a library, you are in charge of the flow of the application. You are choosing when and where to call the library. When you use a framework, the framework is in charge of the flow. 
+
+● What is CDN? Why do we use it?
+Content Delivery Network is a collection of servers or a network of all the servers that deliver data all over the world to the web user.CDN temporarily store content like images, HTML, JavaScript, and video and send the cached content to users who load the webpage.
+
+● Why is React known as React?
+The name “React” reflects this reactive nature of the library. The idea behind React is to build reusable components that can be rendered on the front-end, rather than writing a new piece of code every time you need to display something on the screen.
+
+● What is crossorigin in script tag?
+The crossorigin attribute sets the mode of the request to an HTTP CORS Request.A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
+
+● What is difference between React and ReactDOM
+React is a library for building user interfaces. It introduces the concept of components, which allow developers to craft reusable and self-contained UI elements whereas ReactDOM acts as the glue between React’s Virtual DOM and the actual browser’s DOM. It provides the means to render React components into the DOM.
+
+● What is difference between react.development.js and react.production.js files via CDN?
+react.development.js - More developer friendly, readable, will take more size.
+react.production.js - Minified code that is not developer friendly as it focused on decreasing in file size, code efficiency.
+
+● What is async and defer? 
+Defer - The defer attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, build DOM. The script loads “in the background”, and then runs when the DOM is fully built.
+Async - Async scripts load in the background and run when ready.The DOM and other scripts don’t wait for them, and they don’t wait for anything. A fully independent script that runs when loaded
