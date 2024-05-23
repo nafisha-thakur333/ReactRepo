@@ -9,5 +9,23 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "namaste react course",
+  "main": "App.js",
+  "scripts": {
+    "start" : "parcel index.html",
+    "build" : "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/nafisha-thakur333/ReactRepo"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "nafisha thakur",
+  "license": "ISC"
 }

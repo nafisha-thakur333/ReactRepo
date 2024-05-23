@@ -1,0 +1,26 @@
+● What is JSX?
+JSX is HTML-like or XML-like syntax. JSX stands for JavaScript
+XML. It's a syntax extension for JavaScript.
+
+● Superpowers of JSX
+1) Sanitizes the data
+2) Makes code readable
+3) Makes code simple and elegant
+4) Show more useful errors and warnings
+5) JSX prevents code attacks
+
+● Role of type attribute in script tag? What options can I use there?
+The type attribute specifies the MIME type of a script. The type attribute identifies the content between the <script> and </script> tags.
+Options :-
+1)text/javascript : It is the basic standard of writing javascript code inside the <script> tag.
+2)text/ecmascript : this value indicates that the script is following the EcmaScript standards.
+3)module: This value tells the browser that the script is a module that can import or export other files or modules inside it.
+4)text/babel : This value indicates that the script is a babel type and required bable to transpile it.
+5)text/typescript: As the name suggest the script is written in TypeScript.
+ 
+
+● {TitleComponent} vs {<TitleComponent/>} vs
+
+1) {TitleComponent}: This value describes the TitleComponent as a javascript expression or a variable. The {} can embed a javascript expression or a variable inside it.
+2) <TitleComponent/> : This value represents a Component that is basically returning Some JSX value. In simple terms TitleComponent a function that is returning a JSX value. A component is written inside the {<  />} expression.
+3) <TitleComponent></TitleComponent> : <TitleComponent /> and <TitleComponent></TitleComponent> are equivalent only when < TitleComponent /> has no child components. The opening and closing tags are created to include the child components.

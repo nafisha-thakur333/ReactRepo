@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(169, 235, 235);
+    width: auto;
+  }
+  .left {
+    margin-left: -35px;
+}
+  
+.left img{
+    height: 110px;
+}
+
+  img:hover {
+    transform: scale(1.1);
+  }
+  .center .input {
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .input:focus {
+    border: 3px solid crimson;
+  }
+  
+  .center button {
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: green;
+    color: white;
+  }
+  
+  .right img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 20px 0 0;
+    cursor: pointer;
+  }
