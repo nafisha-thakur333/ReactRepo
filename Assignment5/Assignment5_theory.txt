@@ -1,0 +1,24 @@
+● What is the difference between Named Export, Default export and * as export?
+1) Default Export - We use the ‘export’ and ‘default’ keywords with the component
+name at the end of the component file. 
+Export :- export default Header;
+Import :- import Header from "path"
+
+2) Named Export - write the ‘ export ’ keyword before the variables we want to
+export
+Export - export const "variable name"
+Import - import {variable name} from path
+
+● What is the importance of config.js file
+A config.js file centralizes the configuration settings for your React application. This includes environment variables, API endpoints, feature flags, and other settings. Having these configurations in one place makes it easier to manage and update them without scattering configuration details throughout the codebase.
+
+● What are React Hooks?
+It's simply a regular JavaScript function. However, it becomes powerful when used within React, as it's provided to us by React itself. These pre-built functions have underlying logic developed by React developers. When we install React via npm, we gain access to these superpowers.
+Two crucial hooks we frequently utilize are:
+1. useState()
+2. useEffect()
+
+● Why do we need a useState Hook?
+We are using useState() inside the body component to create a‘state variable‘. 
+import { useState } from "react";
+const [listOfRestaurant] = useState([]);

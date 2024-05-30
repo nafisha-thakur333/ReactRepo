@@ -104,7 +104,7 @@ const resList =
         "Pastas",
         "Burgers"
       ],
-      "avgRating": 4.3,
+      "avgRating": 3.3,
       "parentId": "79622",
       "avgRatingString": "4.3",
       "totalRatingsString": "10K+",
@@ -285,10 +285,10 @@ const resList =
         "Burgers",
         "Pastas"
       ],
-      "avgRating": 4.3,
+      "avgRating": 3.8,
       "veg": true,
       "parentId": "158406",
-      "avgRatingString": "4.3",
+      "avgRatingString": "3.8",
       "totalRatingsString": "1K+",
       "sla": {
         "deliveryTime": 45,
