@@ -4,8 +4,10 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "i": "^0.3.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1"
   },
   "browserslist": [
     "last 2 versions"
@@ -15,8 +17,8 @@
   "description": "namaste react course",
   "main": "App.js",
   "scripts": {
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {

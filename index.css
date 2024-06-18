@@ -146,6 +146,11 @@
     padding: 0 10px 3px 0;
   }
   
+  .res-container a {
+    text-decoration: none !important;
+    color: #000;
+  }
+
   .search-container{
     display: flex;
   }

@@ -1,0 +1,26 @@
+1. What are various ways to add images into our App? Explain with code examples
+import React from 'react';
+import imageSrc from './path/to/image.jpg';
+
+const App = () => {
+  return (
+    <div>
+      <img src={imageSrc} alt="Description" />
+    </div>
+  );
+};
+
+export default App;
+
+2. What would happen if we do console.log(useState())?
+It will log an array containing the state value and the setter function from the useState hook.
+
+3. How will useEffect behave if we don't add a dependency array ?
+If you don't add a dependency array in useEffect, the effect will run on every render of the component.
+
+● What is SPA?
+SPA stands for Single Page Application. In React, SPAs are built where the entire application is contained within a single web page, and navigation and content updates are handled dynamically using React Router or similar libraries.
+
+● What is difference between Client Side Routing and Server Side Routing?
+->Client-Side Routing: Handles routing within the browser using JavaScript libraries like React Router. Page transitions occur without a full page reload, providing a smoother user experience.
+->Server-Side Routing: Involves the server determining which page to serve based on the URL requested by the client. Each navigation typically results in a full page reload from the server.
