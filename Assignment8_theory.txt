@@ -1,0 +1,142 @@
+
+1. How do you create Nested Routes with react-router-dom configuration?
+To create nested routes in react-router-dom, you need to define routes within routes using the <Route> component. Here's an example demonstrating nested routing:
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
+const Home = () => <h2>Home</h2>;
+
+const About = () => (
+  <div>
+    <h2>About</h2>
+    <ul>
+      <li><Link to="team">Team</Link></li>
+      <li><Link to="company">Company</Link></li>
+    </ul>
+    <Routes>
+      <Route path="team" element={<Team />} />
+      <Route path="company" element={<Company />} />
+    </Routes>
+  </div>
+);
+
+const Team = () => <h3>Team</h3>;
+const Company = () => <h3>Company</h3>;
+
+const App = () => (
+  <Router>
+    <nav>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+      </ul>
+    </nav>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about/*" element={<About />} />
+    </Routes>
+  </Router>
+);
+
+export default App;
+
+2. Read about createHashRouter, createMemoryRouter from React Router docs
+->createHashRouter: Used to create a router that uses the hash portion of the URL (#) for routing. This is useful in environments where you can't configure the server to handle navigation requests, such as static file servers or certain hosting platforms.
+
+->createMemoryRouter: Used to create a router that keeps track of the history in memory (doesn't read or write to the address bar). This is useful for non-browser environments such as testing or React Native.
+
+3. What is the order of lifecycle method calls in Class-Based Components?
+The lifecycle methods of a React class component are called in the following order:
+
+->Mounting:
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+->Updating:
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+->Unmounting:
+componentWillUnmount()
+
+->Error Handling:
+componentDidCatch()
+
+4. Why do we use componentDidMount?
+componentDidMount is used to perform side-effects or initialization that requires the component to be in the DOM. This is a good place to perform network requests, set up subscriptions, or any other setup tasks that need to happen once the component has been rendered.
+
+Example:
+
+
+class MyComponent extends React.Component {
+  componentDidMount() {
+    // Perform API call
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => this.setState({ data }));
+  }
+
+  render() {
+    return <div>{this.state.data}</div>;
+  }
+}
+
+5. Why do we use componentWillUnmount? Show with an example
+componentWillUnmount is used to perform any necessary cleanup when the component is removed from the DOM. This can include invalidating timers, canceling network requests, or cleaning up subscriptions.
+
+Example:
+
+
+class MyComponent extends React.Component {
+  componentDidMount() {
+    this.intervalId = setInterval(() => {
+      console.log('Interval running');
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
+  }
+
+  render() {
+    return <div>My Component</div>;
+  }
+}
+
+6. (Research) Why do we use super(props) in constructor?
+In React, when you define a constructor for a subclass, you need to call super(props) before you can use this. This is because this is uninitialized until super() is called. Calling super(props) passes the props to the parent class constructor, allowing the component to access this.props within the constructor.
+
+7. (Research) Why can't we have the callback function of useEffect async?
+The callback function of useEffect should not be async because useEffect expects the return value to be either undefined or a cleanup function. An async function returns a promise, which isn't suitable for the cleanup mechanism of useEffect.
+
+Instead, you should define the async function inside the effect and call it:
+
+import React, { useEffect } from 'react';
+
+const MyComponent = () => {
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('https://api.example.com/data');
+      const data = await response.json();
+      console.log(data);
+    };
+
+    fetchData();
+  }, []);
+
+  return <div>My Component</div>;
+};
+
+export default MyComponent;
+
+
+
+
+
+
