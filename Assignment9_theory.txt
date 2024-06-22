@@ -1,0 +1,52 @@
+1. When and why do we need lazy()?
+The  lazy()  function is a feature in React that allows us to  load
+components dynamically, or lazily, only when they are needed . This can
+be beneficial for improving the performance and load times of
+our web application, especially if it contains a large number of
+components or if some components are rarely used
+
+Why :-
+- Code Splitting and Reducing Initial Bundle Size 
+- Improved Performance 
+- Faster Initial Load
+- Better User Experience 
+- Reducing Browser Caching Overhead 
+
+2. What is suspense?
+In React,  Suspense  is a feature that allows us to declaratively manage asynchronous data fetching and code-splitting in our applications. It is primarily used in combination with the lazy()function for dynamic imports and with the React.lazy() component to improve the user experience when loading data or components asynchronously.
+
+3. Why we got this error : A component suspended while responding to
+synchronous input. This will cause the UI to be replaced with a loading indicator.
+To fix, updates that suspend should be wrapped with startTransition? How does
+suspense fix this error?
+->The error message you provided, "A component was suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix this,updates that suspend should be wrapped with start transition," is related to React's Suspense feature and is typically encountered in asynchronous contexts where components are fetching data or handling code splitting.
+
+4. Advantages and disadvantages of using this code splitting pattern?
+->Advantages:
+-Faster Initial Load Time
+-Improved Performance
+-Optimized Resource Usage
+-Enhanced Caching
+-Simpler Maintenance 
+-Better Mobile Performance
+
+->Disadvantages
+-Complex Configuration 
+-Initial Loading Delay 
+-Asynchronous Loading
+-Route-Based Splitting 
+-Tool and Framework Support 
+-Testing Complexity 
+
+
+5. When do we and why do we need suspense?
+->React Suspense is a feature introduced in React to help manage asynchronous operations, such as data fetching and code splitting, in a more declarative and user-friendly manner.
+
+We need to use Suspense in our React application when we want to:
+-Improve User Experience 
+-Optimize Performance
+-Simplify Code
+-Avoid Callback Hell 
+-Error Handling 
+-Data Fetching 
+-Code splitting
