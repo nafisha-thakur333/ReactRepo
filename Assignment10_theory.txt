@@ -1,0 +1,29 @@
+Q1) Explore all the ways of writing css.
+Ans-> Using CSS - CSS can be added to HTML documents in 3 ways :
+1. Inline
+2. Internal
+3. External
+
+Q2) How do we configure tailwind?
+Step 1: Create a new project (if not already done)
+Step 2: Install Tailwind CSS -npm install tailwindcss
+Step 3: Create a Configuration File  - npx tailwindcss init
+Step 4: Customize the Configuration (Optional)
+Step 5: Create CSS File and add the below statements
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+Q3) In tailwind.config.js, what does all the keys mean (content, theme, extend,
+plugins)?
+1. content Key:Specifies the files that Tailwind CSS should analyze to generate its utility
+classes. 
+2. theme Key:Defines the default styles and configurations for various aspects of
+Tailwind CSS, such as colors, spacing, fonts, and more.
+3. extend Key: Extends or overrides the default configuration provided by Tailwind CSS.
+4. plugins Key: Allows you to use or define custom plugins to extend or modify Tailwind
+CSS functionality
+
+Q4) Why do we have .postcssrc file?
+The  .postcssrc  file, often named postcss.config.js, is a configuration file for PostCSS. PostCSS is a tool for
+transforming styles with JavaScript plugins, and it is commonlyused in conjunction with build tools like webpack or parcel for processing and optimizing CSS.

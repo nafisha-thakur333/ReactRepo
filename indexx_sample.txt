@@ -1,0 +1,207 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.logo{
+    width: 200px;
+    height: 140px;
+}
+
+.nav-items{
+    padding: 0px 20px;
+}
+
+.nav-items > ul{
+    font-size: 24px;
+     display: flex;
+     list-style: none;
+}
+.nav-items > ul > li{
+    padding: 10px;
+    margin:10px;
+}
+.res-card{
+    padding: 5px;
+    width: 200px;
+    margin: 5px;
+}
+
+.res-card:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.search{
+    padding: 10px;
+}
+
+.res-logo{
+    width: 100%;
+    height: 45%;
+}
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 32px 90px 32px 90px;
+}
+
+.filter-btn{
+ margin: 10px;
+ cursor: pointer;
+}
+
+  .search-container {
+    margin: 10px;
+    text-align: center;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .search-container .search-input {
+    width: 70%;
+    box-sizing: border-box;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 15px 14px 20px;
+    border: 1px solid #aabcca;
+    border-right: 0;
+    color: #000000;
+    outline: none;
+  }
+  
+  .search-container .search-btn, .filter-container .filter-btn, .login{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #0768b3;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    color: #ffffff;
+    padding: 15px 22px;
+    margin-left: -4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  .filter-container .search-btn:hover, .search-container .search-btn:hover {
+    background-color: #016034;
+  }
+
+  .search-filter{
+    display: flex;
+    margin-left: 30%;
+  }
+  
+  .restaurant-list {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .res-card {
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .res-card:hover {
+    transform: scale(1.05);
+    transition: all 0.05s ease 0s;
+  }
+  
+  .res-card > img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .res-card > span {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .res-card > span > h4 {
+    font-size: medium;
+  }
+  
+  .res-card > span > h4:first-child {
+    display: flex;
+    align-items: center;
+    background-color: rgb(19, 176, 1);
+    border-radius: 5px;
+    padding: 0 5px 0;
+    color: white;
+  }
+  
+  .res-card > span > h4:first-child .fa-star {
+    font-size: small;
+    padding: 0 10px 3px 0;
+  }
+  
+  .res-container a {
+    text-decoration: none !important;
+    color: #000;
+  }
+
+  .search-container{
+    display: flex;
+  }
+
+  .shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 32px 90px 32px 90px;
+  }
+
+  .shimmer-card{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+  }
+  
+  .user-card {
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  .user-img{
+  width: 250px;
+  margin: -10px;
+  padding: 10px;
+  }
+
+  .greendot{
+    height: 25px;
+    width: 25px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+  }
+  .reddot{
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+  }
+  .display{
+    display: flex;
+  }

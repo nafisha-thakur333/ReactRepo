@@ -22,7 +22,7 @@ class About extends React.Component{
     render(){
         return ( 
             <div>
-            <h1>About page</h1>
+            <h1 className="font-bold text-lg ml-5 p-2">About Us</h1>
             <UserClass name={"First"} login={"nafisha-thakur333"}/>
             </div>
         )

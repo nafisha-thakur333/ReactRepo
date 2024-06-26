@@ -38,16 +38,16 @@ const Body = () => {
     (
         <div className="body">
  
-        <div className="search-filter">
-            <div className="search-container">
+        <div className="flex py-1">
+            <div className="ml-[25%]">
                 <input
-                className="search-input"
+                className="border-2 border-solid border-blue-950 rounded-md bg-slate-200 m-2 p-2"
                 type="text"
                 placeholder="Search anything."
                 value={searchText}
                  onChange={(e) => setSearchText(e.target.value)}
                 />
-                <button type="submit" className="search-btn" onClick = {() => {
+                <button type="submit" className="bg-[#0768b3] rounded-lg shadow-lg text-white px-[22px] py-[10px] mt-[-10] ml-[-4px] cursor-pointer border-none outline-none" onClick = {() => {
                  //search logic here
                  const searchedList = listOfRestaurants.filter(
                     (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -58,13 +58,13 @@ const Body = () => {
                 Search</button>
             </div>
 
-            <div className="filter-container">
-             <button className="filter-btn" onClick={()=> {
+            <div className="m-2 p-2">
+             <button className="bg-[#0768b3] rounded-lg shadow-lg text-white px-[22px] py-[10px] mt-[-10] ml-[-4px] cursor-pointer border-none outline-none" onClick={()=> {
                 // filter logic here
                 const filteredList = listOfRestaurants.filter(
-                    (res) => res.info.avgRating > 4
+                    (res) => res.info.avgRating > 4.3
                 );
-                setListOfRestaurant(filteredList);
+                setfilteredRestaurants(filteredList);
                 console.log(listOfRestaurants);
              }}
              >
@@ -72,7 +72,7 @@ const Body = () => {
             </div> 
         </div>
 
-            <div className="res-container">
+            <div className="flex flex-wrap px-3 py-3 m-[32px_90px]">
              {
              filteredRestaurants.map(restaurant => 
              <Link to={"/restaurants/" + restaurant.info.id}><RestaurantCard key={restaurant.info.id} resData={restaurant}/></Link>

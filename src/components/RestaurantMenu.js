@@ -20,13 +20,15 @@ const RestaurantMenu = () => {
 
     return (
         <div>
-            <h1>{name}</h1>
-            <p>{cuisines.join(", ")} - {costForTwoMessage}</p>
+            <h1 className="font-bold p-2">{name}</h1>
+            <p className="text-sm p-2">{cuisines.join(", ")} - {costForTwoMessage}</p>
            
-            <h1>Menu</h1>
-            <ul>
+            <div className="p-1 m-2">
+            <h1 className="text-md font-bold">Menu</h1>
+            <ul className="p-2 border border-solid overflow-y-scroll h-80">
                 {itemCards.map((res,index) => <li key={index}>{res?.card?.info?.name}</li>)}
             </ul>
+            </div>
         </div>
     );
 };
