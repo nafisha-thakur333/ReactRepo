@@ -1,15 +1,19 @@
-import RestaurantCard from "./RestaurantCard"    
-import {useEffect, useState} from "react"
+import RestaurantCard, {withPromotedlabel} from "./RestaurantCard"    
+import {useContext, useEffect, useState} from "react"
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+
 
 const Body = () => {
     // Local State variable - super powerful variable
     const [listOfRestaurants, setListOfRestaurant] = useState([]);
     const [filteredRestaurants, setfilteredRestaurants] = useState([]);
     const [searchText, setSearchText] = useState("");
+    const RestaurantCardwithPromoted = withPromotedlabel(RestaurantCard);
 
+    const {loggedInUser} = useContext(UserContext);
     //Whenever state variable changes, react triggers a reconcilation cycle(re-renders the component)
 
     useEffect(() => {
@@ -31,15 +35,16 @@ const Body = () => {
             <h1>Looks like you're offline. Please check your internet connection.</h1>
         )
     }
-    //Conditional Rendering
 
+    const {setusername} = useContext(UserContext);
+    //Conditional Rendering
     return listOfRestaurants.length === 0 ? 
     (<Shimmer/>) :
     (
         <div className="body">
  
         <div className="flex py-1">
-            <div className="ml-[25%]">
+            <div className="ml-[20%]">
                 <input
                 className="border-2 border-solid border-blue-950 rounded-md bg-slate-200 m-2 p-2"
                 type="text"
@@ -65,17 +70,39 @@ const Body = () => {
                     (res) => res.info.avgRating > 4.3
                 );
                 setfilteredRestaurants(filteredList);
-                console.log(listOfRestaurants);
+
              }}
              >
              Top Rated Restaurant</button>    
             </div> 
+
+            <div>
+                <input
+                className="border-2 border-solid border-blue-950 rounded-md bg-slate-200 m-2 p-2"
+                type="text"
+                placeholder="Type User Name"
+                value={loggedInUser}
+                 onChange={(e) => setusername(e.target.value)}
+                />
+           </div>
+            
         </div>
 
             <div className="flex flex-wrap px-3 py-3 m-[32px_90px]">
              {
              filteredRestaurants.map(restaurant => 
-             <Link to={"/restaurants/" + restaurant.info.id}><RestaurantCard key={restaurant.info.id} resData={restaurant}/></Link>
+             <Link to={"/restaurants/" + restaurant.info.id}> 
+              {
+                (restaurant.info.avgRating > 4.3) ? 
+                (
+                <RestaurantCardwithPromoted key={restaurant.info.id} resData={restaurant}/>
+                )
+                :
+                (
+                <RestaurantCard key={restaurant.info.id} resData={restaurant}/> 
+                )
+              }
+             </Link>
              )}
             </div>
         </div>
