@@ -1,0 +1,22 @@
+1.useContext vs Redux
+useContext: Ideal for small to medium-sized applications to pass data through the component tree without prop drilling. It is simpler but may cause performance issues with frequent updates as it re-renders all consuming components.
+
+Redux: Suitable for large applications with complex state management needs, managing the state in a single immutable state tree. It is more efficient but requires more setup and boilerplate.
+
+2.Advantage of using Redux Toolkit over Redux
+Redux Toolkit simplifies Redux setup, reduces boilerplate, and includes built-in middleware like redux-thunk. It uses Immer.js for easier state updates and encourages best practices.
+
+3.Explain Dispatcher
+The dispatcher is the central hub for managing all actions in a Redux application. It dispatches actions to the store, triggering state changes via the dispatch method.
+
+4.Explain Reducer
+A reducer is a pure function that specifies how the state changes in response to an action. It takes the current state and action as arguments and returns a new state.
+
+5.Explain Slice
+A slice in Redux Toolkit encapsulates reducer logic and action creators for a specific feature of the application state. It is defined using createSlice and simplifies state management for that feature.
+
+6.Explain Selector
+A selector is a function that extracts and computes derived data from the Redux store. It takes the state as an argument and returns a specific piece of the state, enabling efficient data retrieval.
+
+7.Explain createSlice and the configuration it takes
+createSlice in Redux Toolkit simplifies writing reducers and actions by automatically generating action creators and types. It takes a configuration object with properties: name, initialState, reducers, and optionally extraReducers for handling external actions.

@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
 import { CDN_URL } from "../utils/constants";
-import { addItem } from "../utils/cartSlice";
+import { removeItem } from "../utils/cartSlice";
 
-const ItemsList = ({items}) => {
+const CartItemsList = ({items}) => {
   
   const dispatch = useDispatch();
 
-   const handleAdditem = (item) => {
+   const handleRemoveitem = (item) => {
     //dispatch and action
-     dispatch(addItem(item));
+     dispatch(removeItem(item));
    }
     return (
        <div>
@@ -25,8 +25,8 @@ const ItemsList = ({items}) => {
                <img src={CDN_URL + item.card.info.imageId}></img>
                <div className="absolute inset-0 flex justify-center items-center">
                 <button className="w-16 mt-24 border border-solid shadow-lg text-lime-700 bg-white rounded-md font-bold text-center cursor-pointer hover:bg-gray-200" 
-                onClick={() => handleAdditem(item)}
-                >Add</button>
+                onClick={() => handleRemoveitem(item)}
+                >Remove</button>
                </div>
             </div>
           </div>
@@ -35,4 +35,4 @@ const ItemsList = ({items}) => {
     )
 }
 
-export default ItemsList;
+export default CartItemsList;
