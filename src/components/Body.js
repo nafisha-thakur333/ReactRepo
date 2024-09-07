@@ -37,6 +37,9 @@ const Body = () => {
     }
 
     const {setusername} = useContext(UserContext);
+
+    if (!listOfRestaurants) return null;
+
     //Conditional Rendering
     return listOfRestaurants.length === 0 ? 
     (<Shimmer/>) :
@@ -48,6 +51,7 @@ const Body = () => {
                 <input
                 className="border-2 border-solid border-blue-950 rounded-md bg-slate-200 m-2 p-2"
                 type="text"
+                data-testid="searchInput"
                 placeholder="Search anything."
                 value={searchText}
                  onChange={(e) => setSearchText(e.target.value)}
@@ -67,13 +71,13 @@ const Body = () => {
              <button className="bg-[#0768b3] rounded-lg shadow-lg text-white px-[22px] py-[10px] mt-[-10] ml-[-4px] cursor-pointer border-none outline-none" onClick={()=> {
                 // filter logic here
                 const filteredList = listOfRestaurants.filter(
-                    (res) => res.info.avgRating > 4.3
+                    (res) => res.info.avgRating > 4.5
                 );
                 setfilteredRestaurants(filteredList);
 
              }}
              >
-             Top Rated Restaurant</button>    
+             Top Rated Restaurants</button>    
             </div> 
 
             <div>

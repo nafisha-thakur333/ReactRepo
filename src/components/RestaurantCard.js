@@ -14,7 +14,8 @@ const RestaurantCard = (props) =>{
          sla} = resData?.info;
 
     return (
-        <div className="p-2 m-5 w-52 h-[355px] hover:cursor-pointer hover:border hover:border-black rounded-md
+        <div data-testid="resCard"
+        className="p-2 m-5 w-52 h-[355px] hover:cursor-pointer hover:border hover:border-black rounded-md
         shadow-md hover:scale-105"
          style={{ backgroundColor : "#f0f0f0"}}>
             <img 

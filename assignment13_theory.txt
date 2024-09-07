@@ -1,0 +1,37 @@
+
+1.Different Types of Testing
+-> Unit Testing: Tests individual units or components of the software to ensure they work as expected.
+->Integration Testing: Tests the interaction between different units or components to ensure they work together.
+->System Testing: Tests the complete and integrated software to verify it meets the specified requirements.
+->Acceptance Testing: Tests the software in a real-world scenario to ensure it meets the business requirements and is acceptable to the user.
+->Regression Testing: Tests the software after modifications to ensure that changes have not introduced new defects.
+->Performance Testing: Tests the software's performance, including load, stress, and scalability testing.
+->Security Testing: Tests the software to identify vulnerabilities and ensure data protection.
+->Usability Testing: Tests the software to ensure it is user-friendly and meets the user experience requirements.
+
+2.What is Enzyme?
+Enzyme is a JavaScript testing utility for React that allows developers to test the output of React components. It provides methods for rendering components, traversing the DOM, and simulating user interactions. Enzyme aims to simplify testing by offering a flexible API for asserting, manipulating, and traversing React components.
+
+3. Enzyme vs React Testing Library
+Enzyme:
+
+- Focuses on giving full control over rendering components and interacting with the React component instances.
+- Allows for shallow rendering, which renders the component without its children, providing a more isolated unit test.
+- API methods are more focused on the internal implementation of components.
+
+React Testing Library:
+
+- Emphasizes testing components from the user’s perspective, ensuring tests reflect how the user interacts with the application.
+- Encourages more black-box testing by avoiding testing implementation details.
+- Uses queries to find elements, which makes tests more readable and maintainable.
+
+4. What is Jest and Why Do We Use It?
+Jest is a JavaScript testing framework developed by Facebook. It is widely used for testing JavaScript and React applications. Jest provides an easy-to-use API and a comprehensive set of features, including:
+
+-Built-in Assertions: Comes with built-in matchers for making assertions.
+-Mocking: Allows for mocking functions, modules, and timers to isolate tests and simulate different scenarios.
+-Code Coverage: Generates code coverage reports to identify untested parts of the codebase.
+-Snapshot Testing: Captures the output of React components and compares it against previous snapshots to detect changes.
+-Parallel Testing: Runs tests in parallel to improve performance.
+
+Jest is favored for its simplicity, powerful features, and seamless integration with other tools and frameworks.

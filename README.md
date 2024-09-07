@@ -59,3 +59,22 @@
  - dispatch(action)
  - Selector
 
+# Types of Testing
+- Unit testing
+- Integration testing
+- End to end testing
+
+# Setting up Testing in our app
+- Install React Testing Library
+- Install Jest
+- Install Babel dependencies
+- Configure Babel
+- Configure Parcel Config file to disable default babel transpilation
+- jest -npx jest --init
+- Install jsdom library
+- Install @babel/preset to make JSX work in test cases
+- Include @babel/preset-raect inside my babel config
+- Install @testing-library/jest-dom
+
+
+_ _ in tests is called dunder

@@ -13,7 +13,9 @@ const CartItemsList = ({items}) => {
     return (
        <div>
         {items.map((item) => (
-          <div key={item.card.info.id} className="p-2 m-2 flex justify-between border-gray-200 border-b-2">
+          <div 
+            data-testid = "cart-items"
+            key={item.card.info.id} className="p-2 m-2 flex justify-between border-gray-200 border-b-2">
             <div className="text-left w-9/12">
                 <div className="py-2">
                 <span className="font-bold text-lg ">{item.card.info.name}</span><br/>
